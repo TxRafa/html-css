@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(imagensprojeto02/fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --corfundo: #F2F2F2;
+    --corfundo2: #B1BF7E;
+    --corcabeca: #759237;
+    --cortitulos: #37591E;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--corfundo2);
+    font-family: var(--fonte-destaque);
+}
+a.externo::after {
+    content: '\00A0\1F517';
+} /* Colocar em todo link da class definida com um simbolo apos o link */
+
+header {
+    background-image: linear-gradient(to bottom, var(--corcabeca), var(--cortitulos));
+    
+    min-height: 150px;
+    text-align: center;
+}
+header > h1 {
+    font-family: var(--fonte-destaque);
+    color: var(--corfundo);
+    font-size: 3em;
+    font-weight: normal;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.575);
+    }
+header > p {
+    color: var(--corfundo);
+    font-family: var(--fonte-destaque);   
+    font-size: 1.2em;
+    max-width: 450px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+nav {
+    background-color: var(--cortitulos);
+    padding: 10px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.466);
+    font-family: var(--fonte-padrao);
+    font-size: 0.9em;
+}
+nav > a {
+    color: var(--corfundo);
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+nav > a:hover {
+    background-color: var(--corcabeca);
+    border-radius: 10px;
+
+}
+main {
+    background-color: var(--corfundo);
+    
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 700px;    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main img {
+    width: 100%;
+}
+main img.pequena {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}    
+main h1 {
+    color: var(--cortitulos);
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+    font-weight: normal;
+    
+}
+main h2 {
+    color: var(--cortitulos);
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--corfundo2), transparent);
+    text-indent: 8px;
+
+}
+main p {
+    font-family: var(--fonte-padrao);
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+main strong {
+    color: var(--cortitulos);
+    font-weight: normal;
+    
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cortitulos);
+    background-color: rgba(128, 128, 128, 0.199);
+    padding: 2px 2px;
+}
+main a:hover {
+    text-decoration: underline;
+    color: var(--corcabeca);
+}
+div.video {
+    background-color: var(--cortitulos);
+    margin-bottom: 30px -20px -20px;
+    margin: 0px -20px;
+    padding: 20px;
+    padding-bottom: 59%; /* cobertura do preto do video */
+    position: relative;
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside {
+    background-color: var(--corfundo2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.486);
+}
+aside > h3 {
+    font-family: var(--fonte-padrao);
+    background-color: var(--corcabeca);
+    color: var(--corfundo);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /* 2714 é o codigo do emoji sem # e o 00A0 é espaço e não é compativel com todo navegador */
+    list-style-position: inside; /* Colocar os pontos da lista dentro da caixa */
+    columns: 2; /* Dividir a lista em duas partes */
+
+}
+footer {
+    background-color: var(--cortitulos);
+    color: var(--corfundo);
+    text-align: center;
+    padding: 5px;
+}
+
